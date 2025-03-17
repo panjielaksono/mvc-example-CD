@@ -37,4 +37,11 @@
             $this->mhs->simpanData($nim,$nama);
             $this->index(); //controller dikembalikan ke method index setelah selesai mengakses method ini.
         }
+        function deleteData(){
+            if(isset($_GET['id'])){
+                $id = $_GET['id'];
+                $this->mhs->softDelete($id);
+            }
+            $this->index();
+        }
     }

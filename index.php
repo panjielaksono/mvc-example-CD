@@ -33,7 +33,9 @@
 			case 'tampil-data' :
 				$controller->show_data();
 				break;
-
+			case 'delete-data' : 
+				$controller->deleteData();
+				break;
 			default : 
 				$controller->index();
 				break;

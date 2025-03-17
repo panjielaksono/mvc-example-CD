@@ -10,12 +10,16 @@
 				<div class="col-md-4">&nbsp;</div>
 				<div class="col-md-4"><h3>Data Mahasiswa</h3>
 					<table class="table table-responsive table-bordered table-striped">
-						<tr><td>No</td><td>NIM</td><td>Nama</td></tr>
+						<tr><td>No</td><td>NIM</td><td>Nama</td><td>Created_at</td><td>Delete</td></tr>
 						<?php 
 
 							foreach ($rs as $mahasiswa => $list)
 							{
-								echo '<tr><td><a href="?act=tampil-data&i='.$list['id'].'">'.$list['id'].'</a></td><td>'.$list['nim'].'</td><td>'.$list['nama'].'</td></tr>';
+								echo '<tr><td><a href="?act=tampil-data&i='.$list['id'].'">'.$list['id'].
+								'</a></td><td>'.$list['nim'].
+								'</td><td>'.$list['nama'].
+								'</td><td>'.$list['created_at'].
+								'</td><td><a href="?act=delete-data&id='.$list['id'].'">Delete</a></td></tr>';
 							}
 
 						?>
